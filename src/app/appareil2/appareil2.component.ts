@@ -11,6 +11,7 @@ export class Appareil2Component implements OnInit {
   @Input() appareilName = '';
   @Input() appareilStatus = '';
   @Input() index : number =1 ;
+  @Input() id : number=2 ;
 
   
 

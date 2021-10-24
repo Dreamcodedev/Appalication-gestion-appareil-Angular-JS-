@@ -1,15 +1,15 @@
 export class AppareilService {
     appareils =[
-        {
+        { id :1,
           name:'Télévision',
           status : 'éteint'
     
         },
-        {
+        { id :2,
           name:'Machine à laver',
           status:'éteint'
         },
-        {
+        { id: 3,
           name:'Téléphone',
           status:'allumé'
         }
@@ -34,5 +34,15 @@ export class AppareilService {
     switcOffOne(i:number){
         this.appareils[i].status==='éteint';
     }
+
+    getAppareilById(id: number) {
+      const appareil = this.appareils.find(
+        (s) => {
+          return s.id === id;
+        }
+      );
+      return appareil;
+  }
+
 
 }
